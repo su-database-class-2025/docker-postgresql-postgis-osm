@@ -1,11 +1,11 @@
 # Import spatial data to postgreSQL
 
-データベースシステム講義資料  
-version 0.0.2  
-authors: N. Tsutsumida  
+データベースシステム講義資料
+version 0.0.3
+authors: N. Tsutsumida
 
-Copyright (c) Narumasa Tsutsumida  
-Released under the MIT license  
+Copyright (c) Narumasa Tsutsumida
+Released under the MIT license
 https://opensource.org/licenses/mit-license.php
 
 
@@ -72,7 +72,7 @@ osm2pgsql --create --database=gisdb --slim --style=./default.style -U postgres -
 
 ## 3. 人流データのインポート
 
-データは(G空間情報センター)[https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto]より取得している。
+データは[G空間情報センター](https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto)より取得している。
 1km^2でかつ一月ごとの集計データが入手可能。
 データのダウンロードに時間がかかるので、すでに入手したものを`/work/data/pop_data/data`に`mesh1.zip`と`prefs.zip`をおいている。
 `mesh1.zip`には、1km^2のグリッドデータ`mesh1.shp`がふくまれており、人流データの各データの位置と範囲を規定している。

@@ -1,12 +1,12 @@
 # Docker image for postgis with osm2pgsql & shp2pgsql
 
-データベースシステム講義資料  
-version 0.0.3  
-authors: N. Tsutsumida  
+データベースシステム講義資料
+version 0.0.4
+authors: N. Tsutsumida
 
-Copyright (c) Narumasa Tsutsumida  
-Released under the MIT license  
-https://opensource.org/licenses/mit-license.php  
+Copyright (c) Narumasa Tsutsumida
+Released under the MIT license
+https://opensource.org/licenses/mit-license.php
 
 ## Prerequisites
 - DockerとVScodeのインストール
@@ -14,7 +14,8 @@ https://opensource.org/licenses/mit-license.php
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)  のインストール
 
 ## 起動
-VScodeを立ち上げ、作業ディレクトリ内で以下をTerminalで実行する。　
+- Dockerが起動していることを確認する。
+- VScodeを立ち上げ、作業ディレクトリ内で以下をTerminalで実行する。　
 
 ```sh
 docker compose up -d --build
