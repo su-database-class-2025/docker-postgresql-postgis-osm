@@ -1,17 +1,12 @@
-FROM postgis/postgis:14-3.1
+FROM postgis/postgis:16-3.6
 
-RUN sed -i 's|apt.postgresql.org/pub/repos/apt|apt-archive.postgresql.org/pub/repos/apt|g' /etc/apt/sources.list.d/pgdg.list \
-    && sed -i \
-       -e 's|deb.debian.org/debian|archive.debian.org/debian|g' \
-       -e 's|security.debian.org/debian-security|archive.debian.org/debian-security|g' \
-       -e '/bullseye-updates/d' \
-       /etc/apt/sources.list \
-    && apt-get -o Acquire::Check-Valid-Until=false update \
+RUN apt-get update \
     && apt-get -y install --no-install-recommends \
-       unzip \
-       curl \
-       wget \
-       postgis \
-       osm2pgsql
+    ca-certificates \
+    unzip \
+    curl \
+    wget \
+    osm2pgsql \
+    postgis
 
 WORKDIR /work
